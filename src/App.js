@@ -7,7 +7,7 @@ function App() {
   return (
     <React.Fragment>
       <NavBar />
-      <ItemListContainer />
+      <ItemListContainer text={'E-Commerce de ropa Endavant'} />
     </React.Fragment>
   );
 }
