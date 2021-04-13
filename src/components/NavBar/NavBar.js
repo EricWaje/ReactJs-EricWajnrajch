@@ -13,11 +13,19 @@ const NavBar = () => {
               <img src={logo} className="imgLogo"></img>
             </div>
             <div className="col-sm-4 d-flex flex-row justify-content-center align-content-center align-items-center">
-              <p className="home">Home</p>
-              <p className="cat">Categorias</p>
+              <ul>
+                <li>Home</li>
+                <li>Categorías</li>
+                <li>Contacto</li>
+              </ul>
             </div>
             <div className="col-sm-4 d-flex flex-row justify-content-end align-content-center align-items-center">
-              <CartWidget />
+              <div className="boton">
+                <button>Iniciar sesión</button>
+              </div>
+              <div className="divCarrito">
+                <CartWidget />
+              </div>
             </div>
           </div>
         </div>
