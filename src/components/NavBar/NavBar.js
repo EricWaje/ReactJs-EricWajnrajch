@@ -2,6 +2,7 @@ import React from 'react';
 import CartWidget from '../CartWidget/CartWidget';
 import logo from '../../img/logo.svg';
 import './NavBar.css';
+import ButtonPr from '../Button/ButtonPr';
 
 const NavBar = () => {
   return (
@@ -21,7 +22,7 @@ const NavBar = () => {
             </div>
             <div className="col-sm-4 d-flex flex-row justify-content-end align-content-center align-items-center">
               <div className="boton">
-                <button>Iniciar sesión</button>
+                <ButtonPr info={'Iniciar sesión'} />
               </div>
               <div className="divCarrito">
                 <CartWidget />
