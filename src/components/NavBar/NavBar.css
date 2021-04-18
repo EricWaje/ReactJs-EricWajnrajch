@@ -1,10 +1,12 @@
 .navBar{
     height: 68px;
+    background-color: white;
     -webkit-box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.35);
     -moz-box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.35);
     box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.35);
     position: sticky;
     top: 0px;
+    z-index: 99;
 }
 
 
@@ -26,23 +28,80 @@
     padding: 0px;
 }
 
-li{
+.links{
+    position: relative;
+    color: black;
     margin: 10px 15px;
     padding: 5px;
     font-size: 1.1rem;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-li:hover{
+.links:hover{
     background-color: black;
     color: white;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.buscador{
-    margin-right: 15px;
+.cat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+    width: 100%;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    left: 0px;
+    opacity: 0;
+    text-align: center;
+    background-color: white;
+    -webkit-box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.85);
+    -moz-box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.85);
+    box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.85);
+    transition: all 0.3s ease-in-out;
+}
+
+.cat.activee{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+    width: 100%;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: 36px;
+    left: 0px;
+    opacity: 1;
+    text-align: center;
+    background-color: white;
+    -webkit-box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.85);
+    -moz-box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.85);
+    box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.85);
+    transition: all 0.3s ease-in-out;
+}
+
+.linksD{
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    padding: 5px 4px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.linksD:hover{
+    color: white;
+    background: black;
+    transition: all 0.3s ease-in-out;
 }
 
 .boton{
@@ -62,29 +121,7 @@ li:hover{
         cursor: pointer;
     }
 
-    .menu{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        text-align: center;
-        width: 100%;
-        position: absolute;
-        top: 68px;
-        left: -100%;
-        z-index: 10;
-        background-color: white;
-        border-bottom: 3px solid black;
-        border-top: 3px solid black;
-        margin-right: 0px;
-        padding: 0px;
-        opacity: 0;
-        transition: all 0.5s ease-in-out;
-    }
-
-    .menu-active{
-        list-style: none;
+    .menu.actived{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -96,13 +133,79 @@ li:hover{
         top: 68px;
         left: 0px;
         z-index: 10;
-        background-color: white;
+        background-color: #ffaf26;
         border-bottom: 3px solid black;
         border-top: 3px solid black;
         margin-right: 0px;
         padding: 0px;
-        opacity: 1;
         transition: all 0.5s ease-in-out;
+        color: white;
+    }
+
+    .menu{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 68px;
+        left: -100%;
+        z-index: 10;
+        background-color: #ffaf26;
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+        margin-right: 0px;
+        padding: 0px;
+        transition: all 0.5s ease-in-out;
+        color: white;
+    }
+
+    .cat{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        list-style: none;
+        width: 100%;
+        position: absolute;
+        margin: 0px;
+        padding: 0px;
+        top: 0px;
+        left: 110px;
+        opacity: 0;
+        text-align: center;
+        background-color: white;
+        -webkit-box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.85);
+        -moz-box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.85);
+        box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.85);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .cat.activee{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        list-style: none;
+        width: 100%;
+        position: absolute;
+        margin: 0px;
+        padding: 0px;
+        top: 0px;
+        left: 110px;
+        opacity: 1;
+        text-align: center;
+        background-color: white;
+        -webkit-box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.85);
+        -moz-box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.85);
+        box-shadow: 0px 4px 11px -5px rgba(0,0,0,0.85);
+        transition: all 0.2s ease-in-out;
     }
 
     .container-icon{

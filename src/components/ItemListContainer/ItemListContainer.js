@@ -1,7 +1,13 @@
 import React from 'react';
+import ItemList from './ItemList';
+import { productos } from '../../Productos/Productos';
 
-const ItemListContainer = ({ text }) => {
-  return <div className="text-center mt-5">{text}</div>;
+const ItemListContainer = () => {
+  return (
+    <>
+      <ItemList productos={productos} />
+    </>
+  );
 };
 
 export default ItemListContainer;
