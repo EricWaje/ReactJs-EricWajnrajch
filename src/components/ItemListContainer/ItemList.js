@@ -15,7 +15,7 @@ const ItemList = ({ productos }) => {
     task.then((res) => {
       setItems(res);
     });
-  }, []);
+  }, [productos]);
 
   return (
     <Row style={{ margin: 'auto' }}>

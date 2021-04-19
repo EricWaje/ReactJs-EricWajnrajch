@@ -208,6 +208,10 @@
         transition: all 0.2s ease-in-out;
     }
 
+    .links{
+        color: white;
+    }
+
     .container-icon{
         display: flex;
         font-size: 1.4rem;
