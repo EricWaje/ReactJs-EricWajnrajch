@@ -46,7 +46,7 @@ const NavBar = () => {
         </div>
         <div className="col-sm-4 d-flex flex-row justify-content-end align-content-center align-items-center">
           <div className="boton">
-            <ButtonPr info={'Log in'} />
+            <ButtonPr info={'Registrate'} />
           </div>
           <div className="">
             <CartWidget />

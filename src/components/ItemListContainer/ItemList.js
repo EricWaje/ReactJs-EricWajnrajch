@@ -1,22 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Item from './Item';
 import { Row } from 'react-bootstrap';
 
-const ItemList = ({ productos }) => {
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    const task = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(productos);
-      }, 2000);
-    });
-
-    task.then((res) => {
-      setItems(res);
-    });
-  }, [productos]);
-
+const ItemList = ({ items }) => {
   return (
     <Row style={{ margin: 'auto' }}>
       {items.map((item) => (

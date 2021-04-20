@@ -1,5 +1,5 @@
 .card-prod{
-    border-radius: 5px;
+    border-radius: 2px;
     margin: 0 auto;
     margin-top: 20px;
     transition: all 0.2s ease-in-out;
@@ -22,13 +22,13 @@ h2{
     font-size: 1.5rem;
     font-weight: 400;
     margin-top: 10px;
-    margin-left: 10px;
+    
 }
 
 h3{
     font-weight: 300;
     margin-top: 10px;
-    margin-left: 10px;
+    
     color: rgba(50, 50, 50, 0.906);
 }
 
@@ -37,5 +37,5 @@ h3{
     color: rgba(50, 50, 50, 0.906);
     font-weight: 200;
     transition: all 0.1s ease-in-out;
-    margin-left: 10px;
+    
 }
