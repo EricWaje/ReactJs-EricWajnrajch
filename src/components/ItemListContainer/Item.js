@@ -16,7 +16,9 @@ const Item = ({ title, price, description, img, stock }) => {
           <h3 className="card-title">${price}</h3>
           <p className="card-text descr-prod mb-1">{description}</p>
           <ItemCount stock={stock} />
-          <button onClick={addToCart}>Agregar al carrito</button>
+          <button className="btn-agregar" onClick={addToCart}>
+            Agregar al carrito
+          </button>
         </Card.Body>
       </Card>
     </Col>
