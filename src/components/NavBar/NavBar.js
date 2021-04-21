@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import CartWidget from '../CartWidget/CartWidget';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
-import logo from '../../img/logo.svg';
+import logo from '../../imagenes/logo.svg';
 import './NavBar.css';
 import ButtonPr from '../Button/ButtonPr';
 

@@ -14,7 +14,7 @@ const ItemListContainer = () => {
           description: 'Camisa manga corta floreada',
           price: 200,
           stock: 20,
-          img: '../img/productos/camisa2.png',
+          img: '../../imagenes/productos/camisa1.jpg',
         },
         {
           id: 2,
@@ -22,7 +22,7 @@ const ItemListContainer = () => {
           description: 'Camisa manga larga',
           price: 300,
           stock: 7,
-          img: '../img/productos/camisa2.png',
+          img: '../../imagenes/productos/camisa2.jpg',
         },
         {
           id: 3,
@@ -30,7 +30,7 @@ const ItemListContainer = () => {
           description: 'Camisa manga corta hawaiana',
           price: 400,
           stock: 6,
-          img: '../../img/productos/camisa3.png',
+          img: '../../imagenes/productos/camisa3.jpg',
         },
         {
           id: 4,
@@ -38,7 +38,7 @@ const ItemListContainer = () => {
           description: 'Camisa militar',
           price: 500,
           stock: 10,
-          img: '../../../img/productos/camisa4.png',
+          img: '../../imagenes/productos/camisa4.jpg',
         },
       ];
       setTimeout(() => {
