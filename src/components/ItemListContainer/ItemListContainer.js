@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ItemList from './ItemList';
+import './ItemListContainer.css';
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -58,11 +59,13 @@ const ItemListContainer = () => {
   }, []);
   return (
     <>
-      {items.length > 0 ? (
-        <ItemList items={items} />
-      ) : (
-        <h1 className="text-center mt-5">Cargando...</h1>
-      )}
+      <div className="fondo">
+        {items.length > 0 ? (
+          <ItemList items={items} />
+        ) : (
+          <h1 className="text-center mt-5">Cargando...</h1>
+        )}
+      </div>
     </>
   );
 };
