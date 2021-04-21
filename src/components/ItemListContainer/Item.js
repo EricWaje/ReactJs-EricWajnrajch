@@ -30,7 +30,11 @@ const Item = ({ title, price, description, img, stock }) => {
             substract={substract}
             counter={counter}
           />
-          <button className="btn-agregar" onClick={addToCart}>
+          <button
+            className="btn-agregar"
+            disabled={counter === 0}
+            onClick={addToCart}
+          >
             Agregar al carrito
           </button>
         </Card.Body>
