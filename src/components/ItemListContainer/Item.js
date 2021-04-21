@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Item.css';
 import { Card, Col } from 'react-bootstrap';
 import ItemCount from './ItemCount';
 
 const Item = ({ title, price, description, img, stock }) => {
+  const [counter, setCounter] = useState(1);
+
+  const add = () => {
+    setCounter(counter + 1);
+  };
+
+  const substract = () => {
+    setCounter(counter - 1);
+  };
   const addToCart = () => {
-    console.log('agregando al carrito...');
+    console.log(`agregando al carrito ${counter} artículos`);
   };
   return (
     <Col lg={3} md={4}>
@@ -15,7 +24,12 @@ const Item = ({ title, price, description, img, stock }) => {
           <h2>{title}</h2>
           <h3 className="card-title">${price}</h3>
           <p className="card-text descr-prod mb-1">{description}</p>
-          <ItemCount stock={stock} />
+          <ItemCount
+            stock={stock}
+            add={add}
+            substract={substract}
+            counter={counter}
+          />
           <button className="btn-agregar" onClick={addToCart}>
             Agregar al carrito
           </button>

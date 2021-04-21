@@ -1,17 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ItemCount.css';
 
-const ItemCount = ({ stock }) => {
-  const [counter, setCounter] = useState(1);
-
-  const add = () => {
-    setCounter(counter + 1);
+const ItemCount = ({ stock, add, substract, counter }) => {
+  const nada = () => {
+    console.log('prueba');
   };
-
-  const substract = () => {
-    setCounter(counter - 1);
-  };
-
   return (
     <>
       <div className="d-flex flex-column">
@@ -26,6 +19,7 @@ const ItemCount = ({ stock }) => {
               name="counter"
               value={counter}
               className="text-center"
+              onChange={nada}
             />
           </label>
           <button onClick={substract} disabled={counter === 0 && true}>
