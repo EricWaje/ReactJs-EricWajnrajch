@@ -10,7 +10,15 @@ const ItemCount = ({ stock, add, substract, counter }) => {
       <div className="d-flex flex-column">
         {counter === stock && <h6 className="aviso-stock">Stock máximo</h6>}
         <div className="d-flex flex-row">
-          <button onClick={add} disabled={counter === stock && true}>
+          <button
+            onClick={add}
+            disabled={counter === stock && true}
+            style={
+              counter === stock
+                ? { cursor: 'not-allowed' }
+                : { cursor: 'pointer' }
+            }
+          >
             +
           </button>
           <label>
@@ -22,7 +30,13 @@ const ItemCount = ({ stock, add, substract, counter }) => {
               onChange={nada}
             />
           </label>
-          <button onClick={substract} disabled={counter === 0 && true}>
+          <button
+            onClick={substract}
+            disabled={counter === 0 && true}
+            style={
+              counter === 0 ? { cursor: 'not-allowed' } : { cursor: 'pointer' }
+            }
+          >
             -
           </button>
         </div>

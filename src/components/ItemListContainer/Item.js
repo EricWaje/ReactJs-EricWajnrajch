@@ -33,6 +33,9 @@ const Item = ({ title, price, description, img, stock }) => {
             className="btn-agregar"
             disabled={counter === 0}
             onClick={addToCart}
+            style={
+              counter === 0 ? { cursor: 'not-allowed' } : { cursor: 'pointer' }
+            }
           >
             Agregar al carrito
           </button>
