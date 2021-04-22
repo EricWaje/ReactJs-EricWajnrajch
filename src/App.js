@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import Slides from './components/Carousel/Slides';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Info from './components/Info/Info';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Slides />
       <Info />
       <ItemListContainer />
+      <Footer />
     </>
   );
 }

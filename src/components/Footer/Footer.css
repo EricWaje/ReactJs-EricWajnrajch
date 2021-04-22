@@ -1,0 +1,30 @@
+.fondo-footer{
+    background-color: rgb(41, 41, 41);
+}
+.redes{
+    font-size: 1.8rem;
+    margin: 4px 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.redes:hover{
+    color: #ffaf26;
+    transition: all 0.2s ease-in-out;
+}
+
+h6{
+    font-weight: 300;
+    color: white;
+}
+
+.copy{
+    background-color: rgb(62, 62, 62);
+}
+
+.eric{
+    font-weight: 200;
+    font-size: 1rem;
+    color: rgb(208, 208, 208);
+}

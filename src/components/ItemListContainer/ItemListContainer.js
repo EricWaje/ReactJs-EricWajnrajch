@@ -91,7 +91,7 @@ const ItemListContainer = () => {
   }, []);
   return (
     <>
-      <div className="fondo">
+      <div className="fondo mb-4 mt-4">
         {items.length > 0 ? (
           <ItemList items={items} />
         ) : (
