@@ -17,7 +17,7 @@ const Item = ({ title, price, description, img, stock }) => {
     console.log(`agregando al carrito ${counter} artículos`);
   };
   return (
-    <Col lg={3} md={4}>
+    <Col lg={3} md={4} className="mb-4 mt-4">
       <Card className="card-prod" style={{ width: '12rem' }}>
         <img className="card-img-top img-prod" src={img} alt=""></img>
         <Card.Body>
