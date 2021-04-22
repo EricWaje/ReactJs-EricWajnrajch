@@ -21,7 +21,6 @@ const Item = ({ title, price, description, img, stock }) => {
       <Card className="card-prod" style={{ width: '12rem' }}>
         <img className="card-img-top img-prod" src={img} alt=""></img>
         <Card.Body>
-          <h2>{title}</h2>
           <h3 className="card-title">${price}</h3>
           <p className="card-text descr-prod mb-1">{description}</p>
           <ItemCount
