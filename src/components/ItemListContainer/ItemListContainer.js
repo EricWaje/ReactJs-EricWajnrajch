@@ -192,10 +192,11 @@ const ItemListContainer = () => {
   return (
     <>
       <div className="fondo mb-4 mt-4">
+        <h2 className="catalogo pt-4">CATÁLOGO DE PRODUCTOS</h2>
         {items.length > 0 ? (
           <ItemList items={items} />
         ) : (
-          <h1 className="text-center mt-5">Cargando...</h1>
+          <h3 className="text-center mt-5 cargando">Cargando...</h3>
         )}
       </div>
     </>

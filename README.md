@@ -2,9 +2,18 @@
 
 Tienda de ropa y accesorios para hombre.
 
-## Available Scripts
+## Librerias Descargadas
 
-In the project directory, you can run:
+React-Router-Dom
+React-bootstrap
+React-Icons
+
+### Hooks Implementados
+
+UseState (React)
+UseEffect (React)
+UseParams (React-Router-Dom)
+
 
 ### `npm start`
 
