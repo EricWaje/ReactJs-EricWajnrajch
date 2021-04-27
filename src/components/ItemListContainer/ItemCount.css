@@ -22,3 +22,9 @@ input{
     width: 60px;
     margin: 0px 5px;
 }
+
+.contador{
+    width: 30px;
+    text-align: center;
+    margin: 5px;
+}

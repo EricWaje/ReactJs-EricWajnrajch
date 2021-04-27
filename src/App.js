@@ -6,6 +6,8 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Info from './components/Info/Info';
 import Footer from './components/Footer/Footer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Contacto from './components/Contacto/Contacto';
+import Cart from './components/CartWidget/Cart';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -14,10 +16,16 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
-          <Route exact path="/:category/:id">
+          <Route path="/contacto">
+            <Contacto />
+          </Route>
+          <Route path="/cart">
+            <Cart />
+          </Route>
+          <Route path="/item/:id">
             <ItemDetailContainer />
           </Route>
-          <Route path="/items">
+          <Route path="/category/:id">
             <ItemListContainer />
           </Route>
           <Route path="/">

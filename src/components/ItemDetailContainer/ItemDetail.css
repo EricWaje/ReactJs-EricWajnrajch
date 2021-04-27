@@ -1,0 +1,11 @@
+.img-detail{
+    width: 404px;
+}
+
+.container-detail{
+    border: 1px solid rgba(176, 176, 176, 0.714);
+}
+
+.price{
+    font-weight: 600;
+}

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import ItemList from './ItemList';
 import './ItemListContainer.css';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
+  const { id } = useParams();
 
   useEffect(() => {
     const task = new Promise((resolve, reject) => {
@@ -176,7 +178,9 @@ const ItemListContainer = () => {
 
     task
       .then((res) => {
-        setItems(res);
+        const categorias = res.filter((item) => item.category === `${id}`);
+
+        id === undefined ? setItems(res) : setItems(categorias);
       })
       .catch(() => {
         console.log('Error al cargar');
@@ -184,7 +188,7 @@ const ItemListContainer = () => {
       .finally(() => {
         console.log('Se cargó correctamente');
       });
-  }, []);
+  }, [id]);
   return (
     <>
       <div className="fondo mb-4 mt-4">

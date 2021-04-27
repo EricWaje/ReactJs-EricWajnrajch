@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
 
 const ItemDetailContainer = () => {
-  const { id, category } = useParams();
-  const [items, setItems] = useState([]);
+  const [item, setItem] = useState({});
 
   useEffect(() => {
     const task = new Promise((resolve, reject) => {
@@ -25,7 +23,7 @@ const ItemDetailContainer = () => {
 
     task
       .then((res) => {
-        setItems(res);
+        setItem(res);
       })
       .catch(() => {
         console.log('Error al cargar');
@@ -37,7 +35,11 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      <ItemDetail items={items} />
+      {item && item.id ? (
+        <ItemDetail item={item} />
+      ) : (
+        <h1 className="text-center">Cargando...</h1>
+      )}
     </>
   );
 };

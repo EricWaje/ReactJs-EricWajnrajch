@@ -2,9 +2,6 @@ import React from 'react';
 import './ItemCount.css';
 
 const ItemCount = ({ stock, add, substract, counter }) => {
-  const nada = () => {
-    console.log('prueba');
-  };
   return (
     <>
       <div className="d-flex flex-column">
@@ -21,15 +18,7 @@ const ItemCount = ({ stock, add, substract, counter }) => {
           >
             +
           </button>
-          <label>
-            <input
-              type="text"
-              name="counter"
-              value={counter}
-              className="text-center"
-              onChange={nada}
-            />
-          </label>
+          <p className="contador">{counter}</p>
           <button
             onClick={substract}
             disabled={counter === 0 && true}
