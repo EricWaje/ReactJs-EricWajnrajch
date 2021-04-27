@@ -4,14 +4,14 @@ Tienda de ropa y accesorios para hombre.
 
 ## Librerias Descargadas
 
-React-Router-Dom
-React-bootstrap
+React-Router-Dom.\
+React-bootstrap.\
 React-Icons
 
 ### Hooks Implementados
 
-UseState (React)
-UseEffect (React)
+UseState (React).\
+UseEffect (React).\
 UseParams (React-Router-Dom)
 
 
