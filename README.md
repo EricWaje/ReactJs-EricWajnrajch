@@ -16,7 +16,10 @@ UseState (React).\
 Usado para generar estados locales al componente y tambien guardar esos estados para poder luego modificarlos.
 
 UseEffect (React).\
-UseParams (React-Router-Dom).
+Usado para montar y hacer un render de los componentes solo cuando se los tiene que mostrar.
+
+UseParams (React-Router-Dom).\
+Con useParams se detecta el parametro que le indicamos por la URL.
 
 
 
