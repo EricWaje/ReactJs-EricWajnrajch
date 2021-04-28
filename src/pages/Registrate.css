@@ -1,0 +1,46 @@
+.img-registro{
+    width: 710px;
+}
+
+.img-media{
+    display: none;
+}
+
+.registro-google{
+    position: relative;
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.registro-google:hover{
+    padding: 4px 10px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    transition: all 0.2s ease-in-out;
+
+}
+
+@media screen and (max-width:780px){
+    .img-registro{
+        display: none;
+    }
+
+    .img-media{
+        display: block;
+    }
+
+    .registro-google{
+        font-size: 1.2rem;
+        margin: 20px 0px;
+    }
+
+    .contenedor-btn{
+        text-align: center;
+    }
+
+
+}

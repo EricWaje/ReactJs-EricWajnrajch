@@ -97,7 +97,9 @@ const NavBar = () => {
           </ul>
         </div>
         <div>
-          <ButtonPr info={'Registrate'} />
+          <NavLink to="/registrate">
+            <ButtonPr info={'Registrate'} />
+          </NavLink>
         </div>
         <div>
           <NavLink to="/cart">

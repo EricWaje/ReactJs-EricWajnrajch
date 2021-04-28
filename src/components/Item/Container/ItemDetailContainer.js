@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ItemDetail from './ItemDetail';
+import ItemDetail from '../ItemDetail';
 
 const ItemDetailContainer = () => {
   const [items, setItems] = useState({});
   const { id } = useParams();
+
+  //UseEffect para montar los productos con una promise + un setTimeout para hacer un delay de 2 segundos en la entrega.
 
   useEffect(() => {
     const getItem = () => {
@@ -178,6 +180,8 @@ const ItemDetailContainer = () => {
       });
     };
     getItem().then((res) => {
+      //filtrar el Id del producto a mostrar en ItemDetail
+      //eslint-disable-next-line
       const itemFiltrado = res.filter((item) => item.id == `${id}`);
       setItems(itemFiltrado);
     });

@@ -1,12 +1,13 @@
 import './App.css';
 import React from 'react';
 import NavBar from './components/NavBar/NavBar';
-import Slides from './components/Carousel/Slides';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Fondo from './components/Fondo/Fondo';
+import ItemListContainer from './components/Item/Container/ItemListContainer';
 import Info from './components/Info/Info';
 import Footer from './components/Footer/Footer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import Contacto from './components/Contacto/Contacto';
+import ItemDetailContainer from './components/Item/Container/ItemDetailContainer';
+import Contacto from './pages/Contacto';
+import Registrate from './pages/Registrate';
 import Cart from './components/CartWidget/Cart';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -16,6 +17,9 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
+          <Route path="/registrate">
+            <Registrate />
+          </Route>
           <Route path="/contacto">
             <Contacto />
           </Route>
@@ -29,7 +33,7 @@ function App() {
             <ItemListContainer />
           </Route>
           <Route path="/">
-            <Slides />
+            <Fondo />
             <Info />
             <ItemListContainer />
           </Route>

@@ -3,7 +3,7 @@ import img1 from '../../imagenes/1.png';
 /* import img2 from '../../imagenes/2.png';
 import { Carousel } from 'react-bootstrap'; */
 
-const Slides = () => {
+const Fondo = () => {
   return (
     <>
       <div className="container-fluid" style={{ padding: '0px' }}>
@@ -13,7 +13,7 @@ const Slides = () => {
   );
 };
 
-export default Slides;
+export default Fondo;
 
 /*       <Carousel>
         <Carousel.Item interval={5000}>
