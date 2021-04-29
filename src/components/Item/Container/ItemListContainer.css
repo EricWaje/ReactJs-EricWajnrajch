@@ -10,3 +10,9 @@
     text-align: center;
     text-shadow: -2px 2px 0 rgb(255, 132, 0);
 }
+
+@media screen and (max-width:780px){
+    .catalogo{
+        font-size: 2rem;
+    }
+}

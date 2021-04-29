@@ -11,3 +11,19 @@ h4{
     text-align: center;
     line-height: 26px;
 }
+
+@media screen and (max-width:780px){
+    .credit-card{
+        font-size: 2.4rem;
+    }
+
+    h4{
+        width: 240px;
+        font-size: 0.9rem;
+        font-weight: 300;
+        padding: 4px 4px;
+        margin: 5px 5px;
+        text-align: center;
+        line-height: 26px;
+    }
+}
