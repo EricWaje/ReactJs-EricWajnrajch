@@ -7,8 +7,13 @@ Tienda de ropa y accesorios para hombre.
 ## Librerias Descargadas
 
 React-Router-Dom.\
-React-bootstrap.\
-React-Icons.
+Esta librería se encarga de generar rutas dinámicas para asi facilitar la navegabilidad por el sitio.
+
+React-bootstrap.\ 
+React Bootstrap nos ayuda gracias a sus componentes y sus clases ya creadas a hacer la maquetación del sitio mas rapidamente y también lograr hacerlo responsive.
+
+React-Icons.\
+Con React Icons importamos en nuestro proyecto cualquier ícono que esta librería nos provee.
 
 ### Hooks Implementados
 
