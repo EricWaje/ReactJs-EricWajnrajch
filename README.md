@@ -30,7 +30,7 @@ Con useParams se detecta el parametro que le indicamos por la URL.
 
 1. Desde la opcion Code copiamos el link HTTPS
 
-2. En nustra terminal elegimos un lugar para crear la carpeta y escribimos "git clone" + link que copiamos anteriormente
+2. En nustra terminal elegimos un lugar para clonar la carpeta y escribimos "git clone" + link que copiamos anteriormente
 
 3. Abrimos el proyecto y desde la terminal instalamos todos los paquetes que estan dentro con "npm i"
 
