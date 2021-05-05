@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ItemCount.css';
 
-const ItemCount = ({ stock, add, substract, counter }) => {
+const ItemCount = ({ stock }) => {
+  const [counter, setCounter] = useState(1);
+
+  const add = () => {
+    setCounter(counter + 1);
+  };
+
+  const substract = () => {
+    setCounter(counter - 1);
+  };
+  const addToCart = () => {
+    console.log(`agregando al carrito ${counter} artículos`);
+  };
   return (
     <>
       <div className="d-flex flex-column">
@@ -27,6 +39,18 @@ const ItemCount = ({ stock, add, substract, counter }) => {
             }
           >
             -
+          </button>
+        </div>
+        <div>
+          <button
+            className="btn-agregar"
+            disabled={counter === 0}
+            onClick={addToCart}
+            style={
+              counter === 0 ? { cursor: 'not-allowed' } : { cursor: 'pointer' }
+            }
+          >
+            Agregar al carrito
           </button>
         </div>
       </div>
