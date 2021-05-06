@@ -5,7 +5,7 @@
     margin: 0 auto;
     margin-top: 20px;
     transition: all 0.2s ease-in-out;
-    height: 440px;
+    height: 370px;
 }
 
 .card-prod:hover{
@@ -20,43 +20,22 @@
     border-bottom: 1px solid rgba(194, 194, 194, 0.509);
 }
 
-h2{
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-top: 10px;
-    
-}
-
-h3{
+.titulo-card{
     font-weight: 300;
     margin-top: 10px;
     
-    color: rgba(50, 50, 50, 0.906);
+    color: rgba(50, 50, 50, 0.975);
+}
+
+a{
+    text-decoration: none;
 }
 
 
 .descr-prod{
     font-size: 0.8rem;
-    color: rgba(50, 50, 50, 0.906);
-    font-weight: 200;
+    color: rgba(28, 28, 28, 0.906);
+    font-weight: 300;
     height: 45px;
     
-}
-
-.btn-agregar{
-    margin: 8px 0px;
-    font-size: 1rem;
-    font-weight: 500;
-    background-color: black;
-    color: white;
-    border: none;
-    transition: all 0.2s ease-in-out;
-}
-
-.btn-agregar:hover{
-    -webkit-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.55);
-    -moz-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.55);
-    box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.55);
-    transition: all 0.2s ease-in-out;
-    background-color: #e6950a;
 }

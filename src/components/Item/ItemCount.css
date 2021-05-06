@@ -12,19 +12,67 @@
     box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.35);
 }
 
-button{
+.boton-counter{
     color: black;
     background-color: white;
     border: 1px solid black;
-}
-
-input{
-    width: 60px;
-    margin: 0px 5px;
 }
 
 .contador{
     width: 30px;
     text-align: center;
     margin: 5px;
+    color: black;
+}
+
+.btn-agregar{
+    margin: 8px 0px;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-agregar:hover{
+    -webkit-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.55);
+    box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.55);
+    transition: all 0.2s ease-in-out;
+    background-color: #e6950a;
+}
+
+@media screen and (max-width:780px){
+    .contador{
+        width: 30px;
+        text-align: center;
+        margin: 5px;
+        color: white;
+    }
+
+    .boton-counter{
+        color: black;
+        background-color: #e6950a;
+        border: 1px solid black;
+    }
+
+    .btn-agregar{
+        margin: 8px 0px;
+        font-size: 1rem;
+        font-weight: 500;
+        border: none;
+        transition: all 0.2s ease-in-out;
+        background-color: black;
+        color: white;
+        border: 1px solid #e6950a;
+    }
+
+    .btn-agregar:hover{
+        transition: all 0.2s ease-in-out;
+        background-color: #e6950a;
+        color: black;
+        border: 1px solid #e6950a;
+    }
+
 }

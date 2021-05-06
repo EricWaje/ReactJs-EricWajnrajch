@@ -20,6 +20,7 @@ const ItemCount = ({ stock }) => {
         {counter === stock && <h6 className="aviso-stock">Stock máximo</h6>}
         <div className="d-flex flex-row">
           <button
+            className="boton-counter"
             onClick={add}
             disabled={counter === stock && true}
             style={
@@ -32,6 +33,7 @@ const ItemCount = ({ stock }) => {
           </button>
           <p className="contador">{counter}</p>
           <button
+            className="boton-counter"
             onClick={substract}
             disabled={counter === 0 && true}
             style={

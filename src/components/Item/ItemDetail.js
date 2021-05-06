@@ -1,5 +1,6 @@
 import React from 'react';
 import './ItemDetail.css';
+import ItemCount from './ItemCount';
 const ItemDetail = ({ items }) => {
   return (
     <>
@@ -14,10 +15,13 @@ const ItemDetail = ({ items }) => {
             <div className="dflex flex-column">
               <h5 className="stock">Cantidad de artículos en stock</h5>
             </div>
-            <div className="stock-unidades d-flex flex-row justify-content-center">
+            <div className="stock-unidades d-flex flex-row justify-content-center mt-4">
               <div>
                 <h5>{items.stock}</h5>
               </div>
+            </div>
+            <div className="mt-5">
+              <ItemCount />
             </div>
           </div>
         </div>
