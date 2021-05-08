@@ -7,7 +7,8 @@
     width: 404px;
 }
 
-.price{
+.pricee{
+    color: black;
     font-weight: 300;
     font-size: 2.5rem;
     text-align: start;
@@ -38,6 +39,16 @@
 }
 
 @media screen and (max-width:780px){
+    
+    .descripcion{
+        font-size: 1.1rem;
+    }
+
+    .pricee{
+        color: white;
+        font-size: 2rem;
+    }
+
     .img-detail{
         width: 300px;
     }

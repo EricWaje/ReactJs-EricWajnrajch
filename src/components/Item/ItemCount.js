@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ItemCount.css';
 
 const ItemCount = ({ stock }) => {
-  const [counter, setCounter] = useState(1);
+  const [counter, setCounter] = useState(0);
 
   const add = () => {
     setCounter(counter + 1);
@@ -17,7 +17,6 @@ const ItemCount = ({ stock }) => {
   return (
     <>
       <div className="d-flex flex-column">
-        {counter === stock && <h6 className="aviso-stock">Stock máximo</h6>}
         <div className="d-flex flex-row">
           <button
             className="boton-counter"
@@ -55,6 +54,7 @@ const ItemCount = ({ stock }) => {
             Agregar al carrito
           </button>
         </div>
+        {counter === stock && <h6 className="aviso-stock">Stock máximo</h6>}
       </div>
     </>
   );
