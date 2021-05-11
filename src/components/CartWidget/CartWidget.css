@@ -7,6 +7,16 @@
     transition: all 0.2s ease-in-out;
 }
 
+.unidades{
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 0px 5px;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 100%;
+}
+
 .carrito:hover{
     color: orange;
     transition: all 0.2s ease-in-out;

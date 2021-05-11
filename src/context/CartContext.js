@@ -48,6 +48,12 @@ export const CartProvider = ({ children }) => {
     return sumaTotal;
   };
 
+  //Funcion para mostrar las unidades al lado del carrito
+  const unidades = () => {
+    const numeros = cart.reduce((x, y) => x + y.cantidad, 0);
+    return numeros;
+  };
+
   //Eliminar 1 solo producto del carrito
   const removeItem = (item) => {
     const itemRemoved = cart.filter((i) => i.id !== item);
@@ -60,7 +66,7 @@ export const CartProvider = ({ children }) => {
   return (
     <>
       <CartContext.Provider
-        value={{ addItems, removeItem, isInCart, clearItems, total }}
+        value={{ addItems, removeItem, isInCart, clearItems, total, unidades }}
       >
         {children}
       </CartContext.Provider>
