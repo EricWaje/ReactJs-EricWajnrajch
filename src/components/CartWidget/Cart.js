@@ -13,6 +13,7 @@ const Cart = () => {
                   <th>Producto</th>
                   <th>Descripcion</th>
                   <th>Precio unitario</th>
+                  <th>Unidades</th>
                   <th>Total</th>
                 </tr>
               </thead>
@@ -22,9 +23,11 @@ const Cart = () => {
                   <td>.</td>
                   <td>.</td>
                   <td>.</td>
+                  <td>.</td>
                 </tr>
                 <tr>
                   <td>2</td>
+                  <td>.</td>
                   <td>.</td>
                   <td>.</td>
                   <td>.</td>
