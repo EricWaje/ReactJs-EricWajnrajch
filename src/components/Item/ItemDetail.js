@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ItemDetail.css';
-import ItemCountContainer from './Container/ItemCountContainer';
-const ItemDetail = ({ item, onAdd }) => {
+import ItemCount from './ItemCount';
+const ItemDetail = ({ item, onAdd, goCart }) => {
   return (
     <>
       <div className="container mt-4 mb-4">
@@ -14,10 +14,13 @@ const ItemDetail = ({ item, onAdd }) => {
             <h2 className="descripcion">{item.description}</h2>
             <h4 className="pricee">$ {item.price}</h4>
             <div className="mt-5">
-              <ItemCountContainer item={item} onAdd={onAdd} />
-              <Link to={'/cart'}>
-                <button className="btn-agregar">Terminar compra</button>
-              </Link>
+              {goCart ? (
+                <Link to={'/cart'}>
+                  <button className="btn-agregar">Terminar compra</button>
+                </Link>
+              ) : (
+                <ItemCount item={item} onAdd={onAdd} />
+              )}
             </div>
           </div>
         </div>

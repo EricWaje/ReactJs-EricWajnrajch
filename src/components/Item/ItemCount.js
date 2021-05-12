@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ItemCount.css';
 
-const ItemCount = ({ item, onAdd, add, substract, counter }) => {
+const ItemCount = ({ item, onAdd }) => {
+  const [counter, setCounter] = useState(0);
+
+  const add = () => {
+    setCounter(counter + 1);
+  };
+
+  const substract = () => {
+    setCounter(counter - 1);
+  };
   return (
     <>
       <div className="d-flex flex-column">

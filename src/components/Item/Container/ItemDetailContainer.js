@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
+import Spinner from '../../Spinner';
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../../../context/CartContext';
 import ItemDetail from '../ItemDetail';
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
+  const [goCart, setGocart] = useState(false);
   const { addItems } = useContext(CartContext);
   //const [cart, setCart] = useContext(CartContext);
   const { id } = useParams();
@@ -177,15 +179,16 @@ const ItemDetailContainer = () => {
   //la funcion onAdd se encarga de agregar productos al carrito y se dispara en el ItemCount. Los parametros se los pasan a la funcion addItems
   const onAdd = (counter) => {
     addItems(counter, item[0]);
+    setGocart(true);
     //setCart([...cart, { ...item[0], cantidad: counter }]);
   };
 
   return (
     <>
       {item.length > 0 ? (
-        <ItemDetail item={item[0]} onAdd={onAdd} />
+        <ItemDetail item={item[0]} onAdd={onAdd} goCart={goCart} />
       ) : (
-        <h2 className="text-center">Cargando...</h2>
+        <Spinner />
       )}
     </>
   );

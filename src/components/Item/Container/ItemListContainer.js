@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Spinner from '../../Spinner';
+import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList';
 import './ItemListContainer.css';
-import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -17,8 +18,7 @@ const ItemListContainer = () => {
           description: 'Camisa manga larga floreada',
           price: 200,
           stock: 20,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372706/camisa1_mvazpn.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372706/camisa1_mvazpn.jpg',
         },
         {
           id: 2,
@@ -27,8 +27,7 @@ const ItemListContainer = () => {
           description: 'Camisa manga larga blanca con lunares',
           price: 300,
           stock: 7,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372705/camisa2_tmojul.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372705/camisa2_tmojul.jpg',
         },
         {
           id: 3,
@@ -37,8 +36,7 @@ const ItemListContainer = () => {
           description: 'Camisa manga larga azul con rayas',
           price: 400,
           stock: 6,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372706/camisa3_xyt1ay.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372706/camisa3_xyt1ay.jpg',
         },
         {
           id: 4,
@@ -47,8 +45,7 @@ const ItemListContainer = () => {
           description: 'Camisa manga larga azul marino con lunares',
           price: 500,
           stock: 10,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372706/camisa4_ehruek.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372706/camisa4_ehruek.jpg',
         },
         {
           id: 5,
@@ -57,8 +54,7 @@ const ItemListContainer = () => {
           description: 'Riñonera beige de cuero con dos cierres',
           price: 145,
           stock: 13,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/rinonera1C_alnfaf.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/rinonera1C_alnfaf.jpg',
         },
         {
           id: 6,
@@ -67,8 +63,7 @@ const ItemListContainer = () => {
           description: 'Riñonera negra de cuero con dos cierres',
           price: 155,
           stock: 13,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/rinonera2C_vhgeuc.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/rinonera2C_vhgeuc.jpg',
         },
         {
           id: 7,
@@ -77,8 +72,7 @@ const ItemListContainer = () => {
           description: 'Riñonera negray gris de cuero con dos cierres',
           price: 167,
           stock: 3,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/rinonera3C_hnxpzc.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/rinonera3C_hnxpzc.jpg',
         },
         {
           id: 8,
@@ -87,8 +81,7 @@ const ItemListContainer = () => {
           description: 'Riñonera negra militar de cuero con dos cierres',
           price: 142,
           stock: 6,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/rinonera4C_vk8crq.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/rinonera4C_vk8crq.jpg',
         },
         {
           id: 9,
@@ -97,8 +90,7 @@ const ItemListContainer = () => {
           description: 'Billetera de cuero',
           price: 147,
           stock: 3,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372705/billetera1C_gygduo.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372705/billetera1C_gygduo.jpg',
         },
         {
           id: 10,
@@ -107,8 +99,7 @@ const ItemListContainer = () => {
           description: 'Billetera de cuero',
           price: 167,
           stock: 5,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372706/billetera2C_bf0hvq.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372706/billetera2C_bf0hvq.jpg',
         },
         {
           id: 11,
@@ -117,8 +108,7 @@ const ItemListContainer = () => {
           description: 'Billetera de cuero',
           price: 60,
           stock: 8,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372705/billetera3C_x07jtl.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372705/billetera3C_x07jtl.jpg',
         },
         {
           id: 12,
@@ -127,8 +117,7 @@ const ItemListContainer = () => {
           description: 'Billetera de cuero',
           price: 20,
           stock: 8,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372705/billetera4C_jpsrxi.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372705/billetera4C_jpsrxi.jpg',
         },
         {
           id: 13,
@@ -137,8 +126,7 @@ const ItemListContainer = () => {
           description: 'Remera manga corta',
           price: 200,
           stock: 8,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372706/remera1_zhdmkj.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372706/remera1_zhdmkj.jpg',
         },
         {
           id: 14,
@@ -147,8 +135,7 @@ const ItemListContainer = () => {
           description: 'Remera manga corta',
           price: 220,
           stock: 9,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/remera2_pe94nf.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/remera2_pe94nf.jpg',
         },
         {
           id: 15,
@@ -157,8 +144,7 @@ const ItemListContainer = () => {
           description: 'Remera manga corta',
           price: 250,
           stock: 9,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/remera3_vc9mqa.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/remera3_vc9mqa.jpg',
         },
         {
           id: 16,
@@ -167,8 +153,7 @@ const ItemListContainer = () => {
           description: 'Remera manga corta',
           price: 280,
           stock: 9,
-          img:
-            'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/remera4_wyfums.jpg',
+          img: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/remera4_wyfums.jpg',
         },
       ];
       setTimeout(() => {
@@ -193,11 +178,7 @@ const ItemListContainer = () => {
     <>
       <div className="fondo mb-4 mt-4">
         <h2 className="catalogo pt-4">CATÁLOGO DE PRODUCTOS</h2>
-        {items.length > 0 ? (
-          <ItemList items={items} />
-        ) : (
-          <h3 className="text-center mt-5 cargando">Cargando...</h3>
-        )}
+        {items.length > 0 ? <ItemList items={items} /> : <Spinner />}
       </div>
     </>
   );
