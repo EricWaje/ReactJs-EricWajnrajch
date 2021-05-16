@@ -48,7 +48,3 @@ const ItemListContainer = () => {
 };
 
 export default ItemListContainer;
-
-//const categorias = res.filter((item) => item.category === `${id}`);
-
-//id === undefined ? setItems(res) : setItems(categorias);

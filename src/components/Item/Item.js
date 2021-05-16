@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Item.css';
 import { Card, Col } from 'react-bootstrap';
 
-const Item = ({ title, price, description, img, stock, category, id }) => {
+const Item = ({ price, img, id }) => {
   return (
     <>
       <Col lg={3} md={4} className="mb-4 mt-4">
