@@ -21,6 +21,11 @@ const ItemDetail = ({ item, onAdd, goCart }) => {
               ) : (
                 <ItemCount item={item} onAdd={onAdd} />
               )}
+              <Link to={'/'}>
+                <button className="btn-agregar d-block">
+                  Volver al catalogo
+                </button>
+              </Link>
             </div>
           </div>
         </div>
