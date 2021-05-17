@@ -1,0 +1,17 @@
+.imgCarrito{
+    width: 50px;
+}
+
+.btn-eliminar{
+    background-color: red;
+    border: none;
+    color: white;
+    font-weight: 500;
+}
+
+.totalCarrito{
+    padding: 5px 8px;
+    background-color: white;
+    color: black;
+    font-weight: 400;
+}
