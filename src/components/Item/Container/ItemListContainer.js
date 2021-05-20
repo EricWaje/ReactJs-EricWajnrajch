@@ -18,9 +18,6 @@ const ItemListContainer = () => {
     itemCollection
       .get()
       .then((info) => {
-        info.size === 0
-          ? console.log('no hay items')
-          : console.log(`hay ${info.size} items`);
         const prod = info.docs.map((doc) => {
           return {
             id: doc.id,

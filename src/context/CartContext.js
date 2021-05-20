@@ -24,7 +24,6 @@ export const CartProvider = ({ children }) => {
     total();
     //compruebo si ya esta el item
     if (isInCart(item.id)) {
-      console.log('El item ya esta en el carrito');
       //en caso de que ya este en el carrito, sumo la cantidad de items
       sumarCantidad(counter, item);
     } else {
