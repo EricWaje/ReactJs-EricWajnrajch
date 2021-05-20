@@ -19,22 +19,14 @@ const ItemDetailContainer = () => {
     setLoading(true);
     const db = getFirestore();
     const itemCollection = db.collection('items');
-    itemCollection
+    const itemDetail = itemCollection.doc(id);
+    itemDetail
       .get()
-      .then((info) => {
-        info.size === 0
-          ? console.log('no hay items')
-          : console.log(`hay ${info.size} items`);
-        const prod = info.docs.map((doc) => {
-          return {
-            id: doc.id,
-            ...doc.data(),
-          };
+      .then((doc) => {
+        setItem({
+          id: doc.id,
+          ...doc.data(),
         });
-        //busco el item on un filtro para luego mostrarlo en el detalle
-        const itemFiltrado = prod.filter((i) => i.id === `${id}`);
-        setItem(itemFiltrado[0]);
-        console.log(itemFiltrado);
       })
       .catch((err) => {
         console.log(err);

@@ -6,12 +6,20 @@ import './CartWidget.css';
 const CartWidget = () => {
   const { unidades } = useContext(CartContext);
 
-  return (
-    <div className="carrito">
-      <span className="unidades">{unidades()}</span>
-      <AiOutlineShoppingCart />
-    </div>
-  );
+  if (unidades() === 0) {
+    return (
+      <div className="carrito">
+        <span></span>
+        <AiOutlineShoppingCart />
+      </div>
+    );
+  } else
+    return (
+      <div className="carrito">
+        <span className="unidades">{unidades()}</span>
+        <AiOutlineShoppingCart />
+      </div>
+    );
 };
 
 export default CartWidget;
