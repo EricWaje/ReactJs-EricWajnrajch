@@ -39,5 +39,10 @@ Con useParams se detecta el parametro que le indicamos por la URL.
 
 
 
+<!-- yo grabe el video, después lo transforme en un gif, guarde la imagen en public y escribi en el .md ![alt text](public/imagenes/firabase0.png) -->
+
+
+
+
 
 

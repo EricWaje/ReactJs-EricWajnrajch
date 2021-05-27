@@ -1,11 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Table, Container, Row, Col } from 'react-bootstrap';
 import { CartContext } from '../../context/CartContext';
+import Checkout from './Checkout';
 import { Link } from 'react-router-dom';
 import './Cart.css';
 
 const Cart = () => {
+  const [form, setForm] = useState(false);
   const { removeItem, clearItems, total, cart } = useContext(CartContext);
+
+  const showForm = () => {
+    setForm(!form);
+  };
+
   if (total() === 0) {
     return (
       <Container className="mt-5 mb-5">
@@ -52,7 +59,7 @@ const Cart = () => {
                       className="btn-eliminar"
                       onClick={() => removeItem(c.id)}
                     >
-                      Eliminar
+                      X
                     </button>
                   </td>
                 </tr>
@@ -67,9 +74,13 @@ const Cart = () => {
               <button className="btn-agregar" onClick={clearItems}>
                 Limpiar carrito
               </button>
+              <button className="checkout" onClick={showForm}>
+                Checkout
+              </button>
             </Col>
           </Row>
         </Container>
+        <Container>{form ? <Checkout /> : null}</Container>
       </>
     );
   }
