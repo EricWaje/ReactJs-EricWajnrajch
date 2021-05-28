@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Table, Container, Row, Col } from 'react-bootstrap';
 import { CartContext } from '../../context/CartContext';
-import Checkout from './Checkout';
+import CheckoutContainer from './Checkout';
 import { Link } from 'react-router-dom';
 import './Cart.css';
 
@@ -15,7 +15,7 @@ const Cart = () => {
 
   if (total() === 0) {
     return (
-      <Container className="mt-5 mb-5">
+      <Container className="mt-5 mb-5 contenedorCart">
         <Row style={{ margin: '0 auto' }}>
           <Col
             md={6}
@@ -80,7 +80,7 @@ const Cart = () => {
             </Col>
           </Row>
         </Container>
-        <Container>{form ? <Checkout /> : null}</Container>
+        <Container>{form ? <CheckoutContainer /> : null}</Container>
       </>
     );
   }

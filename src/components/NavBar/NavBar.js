@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
-import ButtonPr from '../Button/ButtonPr';
 import logo from '../../imagenes/logo.svg';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -83,23 +82,7 @@ const NavBar = () => {
                 Riñoneras
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/contacto"
-                activeClassName="selected"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Contacto
-              </NavLink>
-            </li>
           </ul>
-        </div>
-        <div>
-          <NavLink to="/registrate">
-            <ButtonPr info={'Registrate'} />
-          </NavLink>
         </div>
         <div>
           <NavLink to="/cart">

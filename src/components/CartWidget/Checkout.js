@@ -4,7 +4,7 @@ import { CartContext } from '../../context/CartContext';
 import { Row, Col } from 'react-bootstrap';
 import { getFirestore } from '../../firebase';
 
-const Checkout = () => {
+const CheckoutContainer = () => {
   const [info, setInfo] = useState({});
   const [id, setId] = useState('');
   const { cart, total } = useContext(CartContext);
@@ -46,8 +46,11 @@ const Checkout = () => {
       <Row>
         <Col>
           <form onChange={handleInput}>
-            <input type="text" placeholder="Nombre" name="nombre" />
-            <input type="text" placeholder="Apellido" name="apellido" />
+            <input
+              type="text"
+              placeholder="Nombre completo"
+              name="nombreCompleto"
+            />
             <input type="text" placeholder="Direccion" name="direccion" />
             <input type="text" placeholder="Teléfono" name="telefono" />
             <input type="email" placeholder="example@gmail.com" name="email" />
@@ -86,4 +89,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default CheckoutContainer;

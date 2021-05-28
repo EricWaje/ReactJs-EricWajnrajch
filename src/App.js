@@ -6,8 +6,6 @@ import ItemListContainer from './components/Item/Container/ItemListContainer';
 import Info from './components/Info/Info';
 import Footer from './components/Footer/Footer';
 import ItemDetailContainer from './components/Item/Container/ItemDetailContainer';
-import Contacto from './pages/Contacto';
-import Registrate from './pages/Registrate';
 import Cart from './components/CartWidget/Cart';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
@@ -19,12 +17,6 @@ function App() {
         <Router>
           <NavBar />
           <Switch>
-            <Route path="/registrate">
-              <Registrate />
-            </Route>
-            <Route path="/contacto">
-              <Contacto />
-            </Route>
             <Route path="/cart">
               <Cart />
             </Route>
