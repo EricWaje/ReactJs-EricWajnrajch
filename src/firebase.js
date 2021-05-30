@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
-import 'firebase/firebase-auth';
+import 'firebase/auth';
 
 const app = firebase.initializeApp({
   apiKey: process.env.REACT_APP_API_KEY,
@@ -13,28 +13,3 @@ const app = firebase.initializeApp({
 
 export const getFirebase = () => app;
 export const getFirestore = () => firebase.firestore(app);
-export const auth = firebase.auth();
-
-const googleProvider = new firebase.auth.GoogleAuthProvider();
-
-export const signInWithGoogle = () => {
-  auth
-    .signInWithPopup(googleProvider)
-    .then((res) => {
-      console.log(res.user.photoURL);
-    })
-    .catch((error) => {
-      console.log(error.message);
-    });
-};
-
-export const logOut = () => {
-  auth
-    .signOut()
-    .then(() => {
-      console.log('logged out');
-    })
-    .catch((error) => {
-      console.log(error.message);
-    });
-};

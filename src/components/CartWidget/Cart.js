@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Table, Container, Row, Col } from 'react-bootstrap';
 import { CartContext } from '../../context/CartContext';
-import CheckoutContainer from './Checkout';
+import { FaTrashAlt } from 'react-icons/fa';
+import Checkout from './Checkout';
 import { Link } from 'react-router-dom';
 import './Cart.css';
 
@@ -21,7 +22,7 @@ const Cart = () => {
             md={6}
             className="d-flex flex-column justify-content-center align-items-center align-content-center m-auto"
           >
-            <h4>Aun no has agregado ningun producto al carrito</h4>
+            <h4>Aún no has agregado ningún producto al carrito</h4>
             <Link to={'/'}>
               <button className="btn-agregar">Ir al catalogo</button>
             </Link>
@@ -55,12 +56,10 @@ const Cart = () => {
                   <td>{c.cantidad}</td>
                   <td>{c.price * c.cantidad}</td>
                   <td>
-                    <button
-                      className="btn-eliminar"
+                    <FaTrashAlt
+                      className="eliminar"
                       onClick={() => removeItem(c.id)}
-                    >
-                      X
-                    </button>
+                    />
                   </td>
                 </tr>
               ))}
@@ -80,7 +79,7 @@ const Cart = () => {
             </Col>
           </Row>
         </Container>
-        <Container>{form ? <CheckoutContainer /> : null}</Container>
+        <Container>{form ? <Checkout /> : null}</Container>
       </>
     );
   }

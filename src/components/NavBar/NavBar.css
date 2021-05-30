@@ -89,6 +89,17 @@
     display: none;
 }
 
+.logoUsuario{
+  color: black;
+  font-size: 2rem;
+}
+
+.emailUser{
+  font-size: 0.8rem;
+  color: black;
+  margin: 0px 8px;
+}
+
 @media screen and (max-width:931px){
 
   .img-logo{
@@ -157,5 +168,9 @@
       .nav-links:hover{
           color: orange;
           transition: all 0.2s ease-in-out;
+      }
+
+      .emailUser{
+        display: none;
       }
 }

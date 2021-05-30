@@ -9,32 +9,32 @@ import ItemDetailContainer from './components/Item/Container/ItemDetailContainer
 import Cart from './components/CartWidget/Cart';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
+import { UserProvider } from './context/UserContext';
+//import PrivateRoute from './PrivateRoute';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
     <>
-      <CartProvider>
-        <Router>
-          <NavBar />
-          <Switch>
-            <Route path="/cart">
-              <Cart />
-            </Route>
-            <Route path="/item/:id">
-              <ItemDetailContainer />
-            </Route>
-            <Route path="/category/:id">
-              <ItemListContainer />
-            </Route>
-            <Route path="/">
-              <Fondo />
-              <Info />
-              <ItemListContainer />
-            </Route>
-          </Switch>
-          <Footer />
-        </Router>
-      </CartProvider>
+      <UserProvider>
+        <CartProvider>
+          <Router>
+            <NavBar />
+            <Switch>
+              <Route exact path="/dashboard" component={Dashboard} />
+              <Route path="/cart" component={Cart} />
+              <Route path="/item/:id" component={ItemDetailContainer} />
+              <Route path="/category/:id" component={ItemListContainer} />
+              <Route path="/">
+                <Fondo />
+                <Info />
+                <ItemListContainer />
+              </Route>
+            </Switch>
+            <Footer />
+          </Router>
+        </CartProvider>
+      </UserProvider>
     </>
   );
 }

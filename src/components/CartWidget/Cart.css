@@ -41,20 +41,10 @@
     color:rgb(5, 159, 5) ; ;
 }
 
-
-/* ---------- CHECKOUT ---------- */
-
-input{
-    display: block;
-    margin: 12px 0px;
-    padding: 5px;
-    width: 300px;
-}
-
-.btn-enviar{
-    border: 1px solid black;
-    background-color: black;
-    color: white;
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+.eliminar{
+    color: red;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.2rem;
+    cursor: pointer;
 }

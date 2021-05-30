@@ -1,0 +1,103 @@
+.contenedor-orden{
+    min-height: 70vh;
+}
+
+.contenedor-user{
+    min-height: 55vh;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.gracias{
+    margin: 30px 10px;
+    font-size: 1.3rem;
+    line-height: 30px;
+    text-align: center;
+}
+
+.bienvenido{
+    margin: 30px 10px;
+    font-size: 1.3rem;
+    line-height: 32px;
+}
+
+.id{
+    text-align: center;
+}
+
+.btn-logout{
+    cursor: pointer;
+    padding: 5px 8px;
+    margin: 0px 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-logout:hover{
+    margin: 0px 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition: all 0.2s ease-in-out;
+}
+
+.spann{
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0px 5px;
+    text-decoration: underline;
+}
+
+.contenedor-compras{
+    background-color: black;
+    color: white;
+}
+
+.compras{
+    margin: 30px 10px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.contenedor-detalle{
+    background-color: white;
+    color: black;
+}
+
+.detalle{
+    margin: 30px 10px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.contenedor-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.lista{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.listaTicket{
+    list-style: none;
+    text-align: center;
+    border: 1px solid white;
+    padding: 4px 5px;
+    margin: 10px 5px;
+}
+
+
+@media screen and (max-width:931px){
+    .contenedor-compras{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

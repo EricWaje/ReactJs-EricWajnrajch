@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
 import logo from '../../imagenes/logo.svg';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
+import { FaUserCircle } from 'react-icons/fa';
+import { UserContext } from '../../context/UserContext';
 
 const NavBar = () => {
+  const { currentUser } = useContext(UserContext);
   const [click, setClick] = useState(false);
 
   const handleClick = () => {
@@ -83,6 +86,16 @@ const NavBar = () => {
               </NavLink>
             </li>
           </ul>
+        </div>
+        <div>
+          <NavLink to="/dashboard">
+            <FaUserCircle className="logoUsuario" />
+            {currentUser ? (
+              <span className="emailUser">{currentUser.email}</span>
+            ) : (
+              <span></span>
+            )}
+          </NavLink>
         </div>
         <div>
           <NavLink to="/cart">

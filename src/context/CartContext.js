@@ -5,9 +5,7 @@ export const CartContext = React.createContext([]);
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
+  useEffect(() => {}, [cart]);
 
   //Comprobar si esta en el carrito el producto
   const isInCart = (id) => {
