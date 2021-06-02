@@ -19,6 +19,12 @@ React Bootstrap nos ayuda gracias a sus componentes y sus clases ya creadas a ha
 [React Icons](https://react-icons.github.io/react-icons/).\
 Con React Icons importamos en nuestro proyecto cualquier ícono que esta librería nos provee.
 
+[React Spinners](https://www.npmjs.com/package/react-spinners).\
+Spinners utlizados para mostrar mediante los periodos de carga en el sitio
+
+[React Toastify](https://www.npmjs.com/package/react-toastify).\
+Mensajes para alertar al usuario (succes, info, error)
+
 ## Hooks Implementados
 
 UseState (React).\
