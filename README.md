@@ -6,7 +6,11 @@ Tienda de ropa y accesorios para hombre.
 
 ## Dependencias Descargadas
 
-React-Router-Dom.\
+[Firebase](https://firebase.google.com/).\
+Utilizo firebase en este proyecto para poder guardar en una base de datos (Firestore) los productos que se muestran en el sitio con todas sus características.
+También firebase me permite crear usuarios para poder tener un control sobre la gente que compra en el sitio.
+
+[React-Router-Dom](https://reactrouter.com/web/guides/quick-start).\
 Esta librería se encarga de generar rutas dinámicas para asi facilitar la navegabilidad por el sitio.
 
 [React Bootstrap](https://react-bootstrap.github.io/).\
