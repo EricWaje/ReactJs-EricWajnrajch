@@ -36,13 +36,17 @@ Con useParams se detecta el parametro que le indicamos por la URL.
 git clone https://github.com/EricWaje/ReactJs-EricWajnrajch.git
 ```
 
-3. Abrimos el proyecto y desde la terminal instalamos todos las dependencias que estan dentro con "npm i"
+3. Abrimos el proyecto y desde la terminal instalamos todos las dependencias que están dentro con "npm i"
 
-`npm i`
+```
+npm i
+```
 
 4. Escribimos en la terminal "npm start" y se abrira el sitio en el navegador predeterminado.
 
-`npm start`
+```
+npm start
+```
 
 
 
