@@ -10,16 +10,14 @@ const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(false);
   const [goCart, setGocart] = useState(false);
   const { addItems } = useContext(CartContext);
-  //const [cart, setCart] = useContext(CartContext);
   const { id } = useParams();
-
-  //UseEffect para montar los productos con una promise + un setTimeout para hacer un delay de 2 segundos en la entrega.
 
   useEffect(() => {
     setLoading(true);
     const db = getFirestore();
     const itemCollection = db.collection('items');
     const itemDetail = itemCollection.doc(id);
+    console.log(id);
     itemDetail
       .get()
       .then((doc) => {

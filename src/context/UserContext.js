@@ -12,8 +12,6 @@ export const UserProvider = ({ children }) => {
     fire.auth().onAuthStateChanged((currentUser) => {
       setCurrentUser(currentUser);
     });
-
-    console.log(currentUser);
     // eslint-disable-next-line
   }, []);
 

@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import './Dashboard.css';
 import firebase from 'firebase/app';
@@ -19,28 +21,83 @@ const Dashboard = () => {
   const register = async () => {
     try {
       await firebase.auth().createUserWithEmailAndPassword(email, password);
-      history.push('/');
+      history.push('/dashboard');
+      toast.success('Te registraste con éxito', {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } catch (error) {
+      toast.error('Hubo un problema al crear el registro', {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
       setError(error.message);
-      console.log(error.message);
     }
   };
 
   const logIn = async () => {
     try {
       await firebase.auth().signInWithEmailAndPassword(email, password);
-      history.push('/');
+      history.push('/dashboard');
+      toast.success('Iniciaste sesión con éxito', {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } catch (error) {
-      setError(!error);
+      toast.error('Hubo un problema al iniciar sesión', {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      setError(error.message);
     }
   };
 
   const logOut = async () => {
     await firebase.auth().signOut();
+    toast.info('Acabas de finalizar la sesión', {
+      position: 'top-right',
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       {!currentUser ? (
         <Container className="contenedor-orden">
           <Row className="justify-content-center">
@@ -53,46 +110,61 @@ const Dashboard = () => {
           </Row>
           <Row className="justify-content-center">
             <Col md={8}>
-              <form onSubmit={(e) => e.preventDefault() && false}>
-                <input
-                  type="email"
-                  placeholder="email@example.com"
-                  name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <span>{error}</span>
-                <input
-                  type="password"
-                  placeholder="*******"
-                  name="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <span className="pass">
-                  La contraseña debe tener al menos 6 caracteres
-                </span>
-                {!tieneCuenta ? (
-                  <>
-                    <button
-                      type="submit"
-                      className="btn-logout"
-                      onClick={register}
+              {tieneCuenta ? (
+                <form onSubmit={(e) => e.preventDefault() && false}>
+                  <input
+                    type="email"
+                    placeholder="email@example.com"
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <span>{error}</span>
+                  <input
+                    type="password"
+                    placeholder="*******"
+                    name="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <span className="pass">
+                    La contraseña debe tener al menos 6 caracteres
+                  </span>
+                  <button
+                    type="submit"
+                    className="btn-logout"
+                    onClick={register}
+                  >
+                    Registrarme
+                  </button>
+                  <p className="text-center mt-5">
+                    Ya tenés cuenta?
+                    <span
+                      onClick={() => setTienenCuenta(!tieneCuenta)}
+                      className="spann"
                     >
-                      Registrarme
-                    </button>
-                    <p className="text-center mt-5">
-                      Ya tenés cuenta?
-                      <span
-                        onClick={() => setTienenCuenta(!tieneCuenta)}
-                        className="spann"
-                      >
-                        Ingresar
-                      </span>
-                    </p>
-                  </>
-                ) : (
-                  <>
+                      Ingresar
+                    </span>
+                  </p>
+                </form>
+              ) : (
+                <>
+                  <form onSubmit={(e) => e.preventDefault() && false}>
+                    <input
+                      type="email"
+                      placeholder="email@example.com"
+                      name="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <span>{error}</span>
+                    <input
+                      type="password"
+                      placeholder="*******"
+                      name="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
                     <button
                       type="submit"
                       className="btn-logout"
@@ -101,17 +173,17 @@ const Dashboard = () => {
                       Ingresar
                     </button>
                     <p className="text-center mt-5">
-                      No estás registrado?
+                      Aún no te registraste?
                       <span
                         onClick={() => setTienenCuenta(!tieneCuenta)}
                         className="spann"
                       >
                         Registrate
                       </span>
-                    </p>{' '}
-                  </>
-                )}
-              </form>
+                    </p>
+                  </form>
+                </>
+              )}
             </Col>
           </Row>
         </Container>

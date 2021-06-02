@@ -23,6 +23,7 @@ const Ordenes = () => {
       })
       .catch((error) => console.log(error));
   }, [currentUser.email]);
+
   return (
     <>
       {ordenes.length !== 0 ? (
