@@ -2,7 +2,7 @@
 
 Tienda de ropa y accesorios para hombre.
 
-![Endavant](https://user-images.githubusercontent.com/68959845/116279819-5d5be500-a75e-11eb-8ce0-6be48a57cfab.gif)
+![Endavant](public/img/edv.gif)
 
 ## Dependencias Descargadas
 
