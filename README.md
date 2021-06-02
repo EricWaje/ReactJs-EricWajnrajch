@@ -27,14 +27,18 @@ Mensajes para alertar al usuario (succes, info, error)
 
 ## Hooks Implementados
 
-UseState (React).\
+useState (React).\
 Usado para generar estados locales al componente y tambien guardar esos estados para poder luego modificarlos.
 
-UseEffect (React).\
+useEffect (React).\
 Usado para montar y hacer un render de los componentes solo cuando se los tiene que mostrar.
 
-UseParams (React-Router-Dom).\
+useContext (React).\
+Con useContext logramos crear un contexto para poder tener dentro todos los datos, estados y funciones que querramos pasar a cualquier componente.
+
+useParams y useHistory (React-Router-Dom).\
 Con useParams se detecta el parametro que le indicamos por la URL.
+
 
 ## Pasos para ver el sitio desde local
 
