@@ -4,7 +4,7 @@ Tienda de ropa y accesorios para hombre.
 
 ![Endavant](https://user-images.githubusercontent.com/68959845/116279819-5d5be500-a75e-11eb-8ce0-6be48a57cfab.gif)
 
-## Librerias Descargadas
+## Dependencias Descargadas
 
 React-Router-Dom.\
 Esta librería se encarga de generar rutas dinámicas para asi facilitar la navegabilidad por el sitio.
@@ -12,7 +12,7 @@ Esta librería se encarga de generar rutas dinámicas para asi facilitar la nave
 [React Bootstrap](https://react-bootstrap.github.io/).\
 React Bootstrap nos ayuda gracias a sus componentes y sus clases ya creadas a hacer la maquetación del sitio mas rapidamente y también lograr hacerlo responsive de una manera mas sencilla
 
-React-Icons.\
+[React Icons](https://react-icons.github.io/react-icons/).\
 Con React Icons importamos en nuestro proyecto cualquier ícono que esta librería nos provee.
 
 ## Hooks Implementados
