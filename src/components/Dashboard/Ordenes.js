@@ -21,7 +21,8 @@ const Ordenes = () => {
         });
         setOrdenes(todas);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error))
+      .finally(() => {});
   }, [currentUser.email]);
 
   return (

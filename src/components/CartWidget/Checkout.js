@@ -7,10 +7,8 @@ import 'firebase/auth';
 import { CartContext } from '../../context/CartContext';
 import { Row, Col } from 'react-bootstrap';
 import { getFirestore } from '../../firebase';
-//import Spinner from '../Spinner';
 import './Checkout.css';
 import { UserContext } from '../../context/UserContext';
-//import Formulario from '../Formulario/Formulario';
 
 const Checkout = () => {
   //const [loading, setLoading] = useState(false);
@@ -19,8 +17,7 @@ const Checkout = () => {
 
   const [error, setError] = useState(false);
   const [tieneCuenta, setTienenCuenta] = useState(false);
-  // eslint-disable-next-line
-  const [identificador, setIdentificador] = useState('');
+  const [loading, setLoading] = useState(false);
   //estados de registro
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -90,6 +87,7 @@ const Checkout = () => {
     );
     const query = await itemsToUpdate.get();
     const batch = db.batch();
+    setLoading(true);
     const outOfStock = [];
     const orders = db.collection('orders');
 
@@ -116,6 +114,7 @@ const Checkout = () => {
         await orders.add(newOrder);
         history.push('/dashboard');
         clearItems();
+        setLoading(false);
       } catch (err) {
         console.log(err);
       }
@@ -143,7 +142,7 @@ const Checkout = () => {
           >
             <Col md={4} className="contenedor-boton">
               <button onClick={creandoOrden} className="btn-finalizar">
-                Finalizar compra
+                {loading ? 'Creando Compra....' : 'Finalizar compra'}
               </button>
             </Col>
           </Row>
