@@ -19,7 +19,6 @@ const ItemDetailContainer = () => {
     const db = getFirestore();
     const itemCollection = db.collection('items');
     const itemDetail = itemCollection.doc(id);
-    console.log(id);
     itemDetail
       .get()
       .then((doc) => {

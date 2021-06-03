@@ -227,39 +227,3 @@ const Checkout = () => {
 };
 
 export default Checkout;
-
-/* const creandoOrden = async () => {
-  const db = getFirestore();
-
-  const orders = db.collection('orders');
-  const newOrder = {
-    buyer: currentUser.email,
-    items: cart,
-    date: firebase.firestore.Timestamp.fromDate(new Date()),
-    total: total(),
-  };
-
-  await orders
-    .add(newOrder)
-    .then((res) => {
-      setIdentificador(res.id);
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-    .finally(() => {
-      history.push('/dashboard');
-      clearItems();
-      actualizarStock();
-    });
-};
-
-const actualizarStock = () => {
-  const db = getFirestore();
-  const itemsToUpdate = db.collection('items').doc(id);
-  cart.forEach((item) => {
-    itemsToUpdate.update({
-      stock: item.stock - item.cantidad,
-    });
-  });
-}; */
