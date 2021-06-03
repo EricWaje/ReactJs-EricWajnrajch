@@ -13,7 +13,9 @@ const Item = ({ price, img, id, description, categoryId }) => {
 
             <Card.Body>
               <h2 className="descr-prod">{description}</h2>
-              <h3 className="categoria">#{categoryId}</h3>
+              <Link to={`/category/${categoryId}`}>
+                <h3 className="categoria">#{categoryId}</h3>
+              </Link>
               <h3 className="card-title titulo-card">${price}</h3>
             </Card.Body>
           </Link>
