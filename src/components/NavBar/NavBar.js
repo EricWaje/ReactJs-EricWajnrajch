@@ -89,7 +89,9 @@ const NavBar = () => {
         </div>
         <div>
           <NavLink to="/dashboard">
-            <FaUserCircle className="logoUsuario" />
+            <FaUserCircle
+              className={currentUser ? 'logoUsuarioIn' : 'logoUsuarioOut'}
+            />
             {currentUser ? (
               <span className="emailUser">{currentUser.email}</span>
             ) : (

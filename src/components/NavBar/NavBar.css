@@ -89,7 +89,12 @@
     display: none;
 }
 
-.logoUsuario{
+.logoUsuarioIn{
+  color: orange;
+  font-size: 2rem;
+}
+
+.logoUsuarioOut{
   color: black;
   font-size: 2rem;
 }
