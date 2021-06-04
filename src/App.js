@@ -10,7 +10,6 @@ import Cart from './components/CartWidget/Cart';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import { UserProvider } from './context/UserContext';
-//import PrivateRoute from './PrivateRoute';
 import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {

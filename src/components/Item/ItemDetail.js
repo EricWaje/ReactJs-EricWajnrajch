@@ -8,7 +8,11 @@ const ItemDetail = ({ item, onAdd, goCart }) => {
       <div className="container mt-4 mb-4">
         <div className="row d-flex flex-row justify-content-center align-content-center">
           <div className="col-lg-6 d-flex justify-content-center">
-            <img className="img-detail" src={item.img} alt="img" />
+            <img
+              className="img-detail img-fluid max-width: 100%;"
+              src={item.img}
+              alt="img"
+            />
           </div>
           <div className="col-lg-6 d-flex flex-column justify-content-start container-detail">
             <h2 className="descripcion">{item.description}</h2>
