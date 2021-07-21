@@ -16,6 +16,7 @@ const ItemListContainer = () => {
 
     const itemCollection = db.collection('items');
     itemCollection
+      .orderBy('price', 'desc')
       .get()
       .then((info) => {
         const prod = info.docs.map((doc) => {
